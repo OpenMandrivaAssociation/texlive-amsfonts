@@ -30,33 +30,23 @@ versions of the Computer Modern family of fonts. Plain TeX and
 LaTeX macros for using the fonts are provided.
 
 %pre
+    %_texmf_updmap_pre
     %_texmf_mktexlsr_pre
 
 %post
-sed -i	-e 's/^#! \(Map      euler.map\)/\1/'	\
-	-e 's/^#! \(MixedMap cm.map\)/\1/'	\
-	-e 's/^#! \(MixedMap cmextra.map\)/\1/'	\
-	-e 's/^#! \(MixedMap cyrillic.map\)/\1/'	\
-	-e 's/^#! \(MixedMap latxfont.map\)/\1/'	\
-	-e 's/^#! \(MixedMap symbols.map\)/\1/'	\
-	%{_texmfdir}/web2c/updmap.cfg
+    %_texmf_updmap_post
     %_texmf_mktexlsr_post
 
 %preun
-    %_texmf_mktexlsr_preun
+    if [ $1 -eq 0 ]; then
+	%_texmf_updmap_pre
+	%_texmf_mktexlsr_pre
+    fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	if [ -f %{_texmfdir}/web2c/updmap.cfg ]; then
-	    sed -i  -e 's/^\(Map      euler.map\)/#! \1/'	\
-		    -e 's/^\(MixedMap cm.map\)/#! \1/'	\
-		    -e 's/^\(MixedMap cmextra.map\)/#! \1/'	\
-		    -e 's/^\(MixedMap cyrillic.map\)/#! \1/'	\
-		    -e 's/^\(MixedMap latxfont.map\)/#! \1/'	\
-		    -e 's/^\(MixedMap symbols.map\)/#! \1/'	\
-		%{_texmfdir}/web2c/updmap.cfg
-	fi
-	%_texmf_mltexlsr_post
+	%_texmf_updmap_post
+	%_texmf_mktexlsr_post
     fi
 
 #-----------------------------------------------------------------------
@@ -669,6 +659,7 @@ sed -i	-e 's/^#! \(Map      euler.map\)/\1/'	\
 %{_texmfdistdir}/tex/plain/amsfonts/amssym.def
 %{_texmfdistdir}/tex/plain/amsfonts/amssym.tex
 %{_texmfdistdir}/tex/plain/amsfonts/cyracc.def
+%_texmf_updmap_d/amsfonts
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/00README
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/OFL-FAQ.txt
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/OFL.txt
@@ -703,3 +694,12 @@ sed -i	-e 's/^#! \(Map      euler.map\)/\1/'	\
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/amsfonts <<EOF
+Map      euler.map
+MixedMap cm.map
+MixedMap cmextra.map
+MixedMap cyrillic.map
+MixedMap latxfont.map
+MixedMap symbols.map
+EOF
