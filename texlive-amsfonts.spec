@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/amsfonts
+# catalog-date 2009-06-24 20:29:01 +0200
+# catalog-license ofl
+# catalog-version 3.0
 Name:		texlive-amsfonts
 Version:	3.0
 Release:	1
@@ -684,6 +690,7 @@ LaTeX macros for using the fonts are provided.
 %doc %{_texmfdistdir}/source/latex/amsfonts/eufrak.dtx
 %doc %{_texmfdistdir}/source/latex/amsfonts/euscript.dtx
 %doc %{_texmfdistdir}/source/latex/amsfonts/manifest.txt
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -694,6 +701,8 @@ LaTeX macros for using the fonts are provided.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
 mkdir -p %{buildroot}%{_texmf_updmap_d}
 cat > %{buildroot}%{_texmf_updmap_d}/amsfonts <<EOF
 Map      euler.map
