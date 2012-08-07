@@ -1,12 +1,12 @@
-# revision 15878
+# revision 26315
 # category Package
 # catalog-ctan /fonts/amsfonts
-# catalog-date 2009-06-24 20:29:01 +0200
+# catalog-date 2011-12-20 12:56:09 +0100
 # catalog-license ofl
 # catalog-version 3.0
 Name:		texlive-amsfonts
 Version:	3.0
-Release:	2
+Release:	3
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
@@ -28,7 +28,7 @@ bold Greek letters; subscript sizes of large symbols such as
 sum and product; added sizes of the Computer Modern small caps
 font; cyrillic fonts (from the University of Washington); Euler
 mathematical fonts. All fonts are provided as Adobe Type 1
-files, and all except the Euler fonts are provided as MetaFont
+files, and all except the Euler fonts are provided as Metafont
 source. The distribution also includes the canonical Type 1
 versions of the Computer Modern family of fonts. Plain TeX and
 LaTeX macros for using the fonts are provided.
