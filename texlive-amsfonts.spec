@@ -695,3 +695,22 @@ MixedMap cyrillic.map
 MixedMap latxfont.map
 MixedMap symbols.map
 EOF
+
+
+%changelog
+* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-3
++ Revision: 811959
+- Update to latest release.
+
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
++ Revision: 749170
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
++ Revision: 717821
+- texlive-amsfonts
+- texlive-amsfonts
+- texlive-amsfonts
+- texlive-amsfonts
+- texlive-amsfonts
+
