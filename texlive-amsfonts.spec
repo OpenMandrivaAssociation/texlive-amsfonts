@@ -1,12 +1,12 @@
-# revision 26315
+# revision 29208
 # category Package
 # catalog-ctan /fonts/amsfonts
-# catalog-date 2011-12-20 12:56:09 +0100
+# catalog-date 2013-01-28 18:05:09 +0100
 # catalog-license ofl
-# catalog-version 3.0
+# catalog-version 3.04
 Name:		texlive-amsfonts
-Version:	3.0
-Release:	3
+Version:	3.04
+Release:	1
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
@@ -652,9 +652,9 @@ LaTeX macros for using the fonts are provided.
 %{_texmfdistdir}/tex/plain/amsfonts/amssym.tex
 %{_texmfdistdir}/tex/plain/amsfonts/cyracc.def
 %_texmf_updmap_d/amsfonts
-%doc %{_texmfdistdir}/doc/fonts/amsfonts/00README
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/OFL-FAQ.txt
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/OFL.txt
+%doc %{_texmfdistdir}/doc/fonts/amsfonts/README
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/amsfndoc.pdf
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/amsfonts.pdf
 %doc %{_texmfdistdir}/doc/fonts/amsfonts/amssymb.pdf
@@ -695,22 +695,3 @@ MixedMap cyrillic.map
 MixedMap latxfont.map
 MixedMap symbols.map
 EOF
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-3
-+ Revision: 811959
-- Update to latest release.
-
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
-+ Revision: 749170
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
-+ Revision: 717821
-- texlive-amsfonts
-- texlive-amsfonts
-- texlive-amsfonts
-- texlive-amsfonts
-- texlive-amsfonts
-
