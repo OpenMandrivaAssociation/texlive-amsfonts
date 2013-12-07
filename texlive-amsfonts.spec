@@ -6,7 +6,7 @@
 # catalog-version 3.04
 Name:		texlive-amsfonts
 Version:	3.04
-Release:	4
+Release:	5
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
