@@ -1,19 +1,13 @@
-# revision 29208
-# category Package
-# catalog-ctan /fonts/amsfonts
-# catalog-date 2013-01-28 18:05:09 +0100
-# catalog-license ofl
-# catalog-version 3.04
 Name:		texlive-amsfonts
-Version:	3.04
-Release:	11
+Version:	61937
+Release:	1
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.r61937.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.doc.r61937.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.source.r61937.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ versions of the Computer Modern family of fonts. Plain TeX and
 LaTeX macros for using the fonts are provided.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -679,7 +673,8 @@ LaTeX macros for using the fonts are provided.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
