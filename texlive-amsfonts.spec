@@ -1,6 +1,6 @@
 Name:		texlive-amsfonts
 Version:	61937
-Release:	1
+Release:	2
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
