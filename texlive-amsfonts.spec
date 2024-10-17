@@ -3,7 +3,7 @@ Version:	61937
 Release:	2
 Summary:	TeX fonts from the American Mathematical Society
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/amsfonts
+URL:		https://www.ctan.org/tex-archive/fonts/amsfonts
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/amsfonts.doc.r%{version}.tar.xz
